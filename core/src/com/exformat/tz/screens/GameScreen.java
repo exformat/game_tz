@@ -78,7 +78,7 @@ public class GameScreen implements Screen
 
 		if(player.getY() > GameConstants.WORLD_HEIGHT / 2){
 			viewport.getCamera().position.y = player.getY();
-			table.setPosition(table.getX(), 8 + player.getY());
+			table.setPosition(table.getX(), GameConstants.WORLD_HEIGHT - table.getHeight() + player.getY());
 		}
 
 		
@@ -153,7 +153,7 @@ public class GameScreen implements Screen
 			player = new Player(world, atlas);
 			player.setTransform(GameConstants.WORLD_WIDTH / 2, 2, 0);
 			
-			table = new NumberTable(atlas, new Vector2(9.5f, 19));
+			table = new NumberTable(atlas, new Vector2(9.5f, GameConstants.WORLD_HEIGHT - table.getHeight()));
 			
 			PlatformManager platformManager = new PlatformManager(world, atlas);
 			BackgroundManager backgroundManager = new BackgroundManager(atlas);
