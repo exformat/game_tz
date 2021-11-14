@@ -32,7 +32,7 @@ public class Player extends GameObject
 	
 	public void jump(){
 		if(contactPlatform){
-			body.applyLinearImpulse(0, 8, 0, 0, true);
+			body.applyLinearImpulse(0, 7.5f, 0, 0, true);
 			AudioManager.jump.play();
 		}
 	}

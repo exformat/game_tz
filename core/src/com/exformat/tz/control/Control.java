@@ -27,7 +27,6 @@ public class Control extends InputAdapter implements GestureDetector.GestureList
 
 	@Override
 	public boolean tap(float x, float y, int count, int button) {
-		player.jump();
 		return false;
 	}
 
@@ -39,7 +38,10 @@ public class Control extends InputAdapter implements GestureDetector.GestureList
 		if(deltaX < 0){
 			player.moveLeft();
 		}
-		
+
+		if(delteY < 0){
+			player.jump();
+		}
 		return false;
 	}
 
