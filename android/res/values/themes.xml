@@ -1,0 +1,24 @@
+<resources>
+
+    <style name="Theme.Work" parent="Theme.AppCompat.Light" />
+
+    <style name="Theme.Work.Fullscreen" parent="Theme.Work">
+        <item name="android:actionBarStyle">@style/Widget.Theme.Work.ActionBar.Fullscreen</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.Work.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+
+    <style name="Theme.Work.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Work.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Work.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

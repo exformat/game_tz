@@ -1,0 +1,37 @@
+tz.png
+	size: 4096, 2048
+	repeat: none
+0
+	bounds: 2330, 1924, 32, 64
+1
+	bounds: 1084, 1534, 32, 64
+2
+	bounds: 1118, 1534, 32, 64
+3
+	bounds: 550, 2, 32, 64
+4
+	bounds: 516, 2, 32, 64
+5
+	bounds: 1084, 1468, 32, 64
+6
+	bounds: 1214, 1664, 32, 64
+7
+	bounds: 1248, 1664, 32, 64
+8
+	bounds: 2296, 1858, 32, 64
+9
+	bounds: 2296, 1924, 32, 64
+background
+	bounds: 2, 68, 1080, 1920
+enemy
+	bounds: 1084, 1600, 128, 128
+grass
+	bounds: 1084, 1860, 1080, 128
+ground
+	bounds: 1084, 1730, 1080, 128
+platform
+	bounds: 2, 2, 512, 64
+player
+	bounds: 2166, 1860, 128, 128
+table
+	bounds: 2166, 1730, 128, 128
