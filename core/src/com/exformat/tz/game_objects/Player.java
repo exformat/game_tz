@@ -12,6 +12,7 @@ import com.exformat.tz.model.GameObject;
 public class Player extends GameObject
 {
 	private float velocity = 3.3f;
+	private float jumpVelocity = 14;
 	private Fixture sensor;
 	
 	public static boolean contactPlatform = false;
@@ -25,15 +26,19 @@ public class Player extends GameObject
 		setFilter(GameConstants.CATEGORY_PLAYER, GameConstants.MASK_PLAYER);
 		
 		body.setFixedRotation(true);
-		body.setLinearDamping(1.5f);
+		body.setLinearDamping(1);
+
+		TAG = "PLAYER";
 	}
 
 	
 	
 	public void jump(){
-		if(contactPlatform){
-			body.applyLinearImpulse(0, 7.5f, 0, 0, true);
+		if(contactPlatform && body.getLinearVelocity().y < 0.1f){
+			float xVelocity = body.getLinearVelocity().x;
+			body.setLinearVelocity(xVelocity, jumpVelocity);
 			AudioManager.jump.play();
+			log("jump");
 		}
 	}
 	
