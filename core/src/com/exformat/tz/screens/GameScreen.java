@@ -74,9 +74,13 @@ public class GameScreen implements Screen
 		ScreenUtils.clear(0,0,0,1);
 		
 		world.step(0.016f, 6, 2);
-		render.draw();
-		
-		viewport.getCamera().position.y = player.getY();
+
+
+		if(player.getY() > GameConstants.WORLD_HEIGHT / 2){
+			viewport.getCamera().position.y = player.getY();
+			table.setPosition(table.getX(), 8 + player.getY());
+		}
+
 		
 		for(int i = gameObjects.size; --i >= 0;){
 			gameObjects.get(i).update(dt);
@@ -92,13 +96,14 @@ public class GameScreen implements Screen
 		}
 		
 		table.setFloor(floor);
-		table.setPosition(table.getX(), 8 + player.getY());
-		
+
 		if(floor > maxFloor){
 			maxFloor = floor;
 			preferences.putInteger("max floor", maxFloor);
 			preferences.flush();
 		}
+
+		render.draw();
 	}
 
 	@Override
